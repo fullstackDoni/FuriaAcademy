@@ -51,16 +51,15 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo">
-                        <img src="{{asset('images/logo.png')}}" alt="" width="80" height="80">
+                        <img src="{{asset('images/logo.png')}}" alt="" width="70" height="70">
                     </a>
                     <ul class="nav">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">Browse</a></li>
-                        <li><a href="#">Details</a></li>
+                        <li><a href="/" class="active">Басты бет</a></li>
+                        <li><a href="#">Кіру</a></li>
+                        <li><a href="#">Тіркелу</a></li>
                         <li><a href="#">Streams</a></li>
-                        <li><a href="#">Profile <img src="assets/images/profile-header.jpg" alt=""></a></li>
+                        <li><a href="#">Profile <img src="{{asset('images/doni.jpg')}}" alt=""></a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -75,7 +74,63 @@
 <main class="py-4">
     @yield('content')
 </main>
-
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="footer-widget">
+                    <div class="footer-menu">
+                        <h4 class="footer-widget-title">Академия туралы</h4>
+                        <ul>
+                            <li>
+                                <a href="{{route('aboutus')}}">Біз туралы</a>
+                            </li>
+                            <li>
+                                <a href="{{route('info')}}">Толық ақпарат</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@FuriaAcademy"><i class="fab fa-youtube fa-1x" style="color: red;"><br></i>YOUTUBE арнамыз</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <div class="footer-widget">
+                    <div class="footer-menu">
+                        <h4 class="footer-widget-title">Байланыс құралдары</h4>
+                        <ul class="text-white">
+                            <li>
+                                iamfuriaacademy@gmail.com
+                            </li>
+                            <li>
+                                +77777777777
+                            </li>
+                            <li>
+                                Жандосова 55,5 Этаж,537 кабинет(Нархоз Университеті)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright-text">
+                                <p>© 2023 Furia Academy. All rights reserved.
+                                </p>
+                            </div>
+                            <div class="go_top">
+                                <span class="icon-arrow-up"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
@@ -86,16 +141,6 @@
 <script src="{{asset('js/tabs.js')}}"></script>
 <script src="{{asset('js/popup.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright © 2023 <a href="#">Furia Academy</a>. All rights reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </body>
-
 </html>

@@ -12,11 +12,11 @@
                             <div class="feature-banner header-text">
                                 <div class="row">
                                     <div class="col-lg-4">
-                                        <img src="{{asset('images/test.jpg')}}" alt="" style="border-radius: 23px;">
+                                        <img src="{{asset('images/logo.png')}}" alt="" style="border-radius: 23px;">
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="text-white">
-                                           Furia Academy -
+                                           Furia Academy - Бұл Тегін Бағдарламалау тілдеріне арналған курс.Бейнаматериалдар және Тапсырмалар болады.Қосымша бізде Кітаптар сыйлыққа беріледі
                                         </div>
                                     </div>
                                 </div>
