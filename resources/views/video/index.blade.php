@@ -34,8 +34,8 @@
                             @foreach($videos as $video)
                             <div class="col-lg-3 col-sm-6">
                                 <div class="item ">
-                                    <img src="{{$video->image}}" alt="" width="150px" height="150px" >
-                                    <h4>{{$video->name}}<br></h4>
+                                    <img src="{{$video->image}}" width="150px" height="150px">
+                                    <a href="{{route('video.show',$video->id)}}">{{$video->name}}</a>
                                 </div>
                             </div>
                             @endforeach

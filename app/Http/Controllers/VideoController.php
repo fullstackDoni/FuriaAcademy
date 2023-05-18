@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
+use App\Models\Video;
 use Illuminate\Http\Request;
+
 
 class VideoController extends Controller
 {
     public function index(){
-        $allVideo = Course::all();
+        $allVideo = Video::all();
         return view('video.index',['videos'=>$allVideo]);
     }
-    public function show(Course $course){
-        return view('video.show',['videos'=>$course]);
+    public function show(Video $video){
+        return view('video.show',['video' => $video]);
     }
 }
