@@ -31,7 +31,7 @@
                             <h4>Біздің оқытатын бағдарламалалық тілдеріміз</h4>
                         </div>
                         <div class="row">
-                            @foreach($videos as $video)
+                            @foreach($allVideo as $video)
                             <div class="col-lg-3 col-sm-6">
                                 <div class="item ">
                                     <img src="{{$video->image}}" width="150px" height="150px">

@@ -9,15 +9,19 @@
                         <div class="col-lg-12">
                             <div class="feature-banner header-text">
                                 <div class="row">
-                                    @foreach($video as $vio)
-                                    <div class="col-lg-4">
-                                        <img src="{{$vio->image}}" alt="ads" style="border-radius: 23px;">
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="text-white">
-                                            <p class="text-white">{{$vio->description}}</p>
+                                    @foreach($videos as $video)
+                                        <div class="col-lg-4">
+                                            <img src="{{$video->image}}" alt="" style="border-radius: 23px;">
                                         </div>
-                                    </div>
+                                        <div class="col-lg-8">
+                                            <div class="text-white">
+                                                <p class="text-white">{{$video->description}}</p>
+                                                <div class="p-5">
+                                                    <br>
+                                                    <a class="btn btn-primary" target="_blank" href="{{$video->video}}" role="button">Барлық видео осы жерде </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>

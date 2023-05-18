@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\InfoForCourseController;
