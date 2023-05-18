@@ -31,30 +31,14 @@
                             <h4>Біздің оқытатын бағдарламалалық тілдеріміз</h4>
                         </div>
                         <div class="row">
+                            @foreach($videos as $video)
                             <div class="col-lg-3 col-sm-6">
-                                <div class="item">
-                                    <img src="{{asset('images/java.png')}}" alt="">
-                                    <h4>Java<br></h4>
+                                <div class="item ">
+                                    <img src="{{$video->image}}" alt="" width="150px" height="150px" >
+                                    <h4>{{$video->name}}<br></h4>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="item">
-                                    <img src="{{asset('images/python.jpg')}}" alt="" >
-                                    <h4>Python<br></h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="item">
-                                    <img src="{{asset('images/web.png')}}" alt="" height="150">
-                                    <h4>Intro to Web<br></h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="item">
-                                    <img src="{{asset('images/reactjs.jpg')}}" alt="">
-                                    <h4>React JS<br></h4>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
