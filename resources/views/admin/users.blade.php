@@ -28,6 +28,22 @@
             <td>{{$users[$i]->name}}</td>
             <td>{{$users[$i]->email}}</td>
             <td>{{$users[$i]->role->name}}</td>
+            <td>
+                <form action="@if($users[$i]->is_active)
+                                 {{route('users.ban',$users[$i]->id)}}
+                              @else {{route('users.unban',$users[$i]->id)}}
+                              @endif" method="post">
+                    @csrf
+                    @method('PUT')
+                    <button class="btn {{$users[$i]->is_active ? 'btn-success': 'btn-danger'}}" type="submit">
+                        @if($users[$i]->is_active)
+                            Ban
+                        @else
+                            UnBan
+                        @endif
+                    </button>
+                </form>
+            </td>
         </tr>
         @endfor
         </tbody>

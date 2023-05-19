@@ -63,7 +63,7 @@
                             @if(Route::has('register'))
                                 <li><a href="{{route('register')}}">Тіркелу</a></li>
                             @endif
-                            @endguest
+                    @endguest
                             @auth
                                 <li><a href="{{route('admin.users.index')}}">Юзерлерлер</a></li> |
                                 <li><a href="{{route('admin.video.index')}}">Видеолар</a></li> |
@@ -104,7 +104,7 @@
                                     арнамыз</a>
                             </li>
                             <li>
-                                <a href="https://www.donationalerts.com/r/donistreamer" target="_blank">Көмек қолын созу</a>
+                                <a href="https://www.donationalerts.com/r/furiaacademy" target="_blank">Көмек қолын созу</a>
                             </li>
                         </ul>
                     </div>

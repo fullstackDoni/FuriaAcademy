@@ -23,6 +23,8 @@ Route::middleware('auth')->group(function (){
         Route::get('/admin/videos/create',[VideosController::class,'create'])->name('admin.video.create');
         Route::post('/admin/videos/store',[VideosController::class,'store'])->name('admin.video.store');
         Route::get('/admin/users/search',[UserController::class,'index'])->name('admin.users.search');
+        Route::put('/users/{user}/ban',[UserController::class,'ban'])->name('users.ban');
+        Route::put('/users/{user}/unban',[UserController::class,'unban'])->name('users.unban');
     });
     Route::middleware('hasrole:moderator')->group(function (){
 
