@@ -29,6 +29,7 @@
                     <div class="col-lg-12">
                         <div class="heading-section">
                             <h4>Біздің оқытатын бағдарламалалық тілдеріміз</h4>
+                            <hr class="text-white">
                         </div>
                         <div class="row">
                             @foreach($allVideo as $video)

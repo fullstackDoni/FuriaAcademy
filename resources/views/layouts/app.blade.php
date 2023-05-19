@@ -54,17 +54,27 @@
                     <a href="/" class="logo">
                         <img src="{{asset('images/logo.png')}}" alt="" width="70" height="70">
                     </a>
-                    <ul class="nav">
-                        <li><a href="/" class="active">Басты бет</a></li>
-                        <li><a href="#">Кіру</a></li>
-                        <li><a href="#">Тіркелу</a></li>
-                        <li><a href="#">Streams</a></li>
-                        <li><a href="#">Profile <img src="{{asset('images/doni.jpg')}}" alt=""></a></li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
+                    @guest
+                        <ul class="nav">
+                            <li><a href="/" class="active">Басты бет</a></li>
+                            @if(Route::has('login'))
+                                <li><a href="{{route('login')}}">Кіру</a></li>
+                            @endif
+                            @if(Route::has('register'))
+                                <li><a href="{{route('register')}}">Тіркелу</a></li>
+                            @endif
+                            @endguest
+                            @auth
+                                <li><a href="{{route('admin.users.index')}}">Юзерлерлер</a></li> |
+                                <li><a href="{{route('admin.video.index')}}">Видеолар</a></li> |
+                                <li><a href="{{route('logout')}}"
+                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();">Шығу</a>
+                                    <form id="logout-form" action="{{route('logout')}}" method="POST"
+                                          class="d-none">
+                                        @csrf
+                                    </form></li>
+                            @endauth
+                        </ul>
                 </nav>
             </div>
         </div>
@@ -89,7 +99,12 @@
                                 <a href="{{route('info')}}">Толық ақпарат</a>
                             </li>
                             <li>
-                                <a href="https://www.youtube.com/@FuriaAcademy"><i class="fab fa-youtube fa-1x" style="color: red;"><br></i>YOUTUBE арнамыз</a>
+                                <a href="https://www.youtube.com/@FuriaAcademy"><i class="fab fa-youtube fa-1x"
+                                                                                   style="color: red;"><br></i>YOUTUBE
+                                    арнамыз</a>
+                            </li>
+                            <li>
+                                <a href="https://www.donationalerts.com/r/donistreamer" target="_blank">Көмек қолын созу</a>
                             </li>
                         </ul>
                     </div>
@@ -104,7 +119,7 @@
                                 iamfuriaacademy@gmail.com
                             </li>
                             <li>
-                                +77777777777
+                                +7 747 474 3456
                             </li>
                             <li>
                                 Жандосова 55,5 Этаж,537 кабинет(Нархоз Университеті)
